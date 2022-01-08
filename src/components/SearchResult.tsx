@@ -29,14 +29,14 @@ export const SearchResult = () => {
 
   return (
     <div
-      className={`flex flex-col bg-dark rounded-b-xl text-light-color w-96 p-3 overflow-auto -mt-3 ${
+      className={`flex flex-col bg-dark rounded-b-xl text-light-color w-96 p-3 overflow-auto -mt-3 max-h-fit ${
         places?.length === 0 || !areResultsVisible ? 'hidden' : ''
       }`}
     >
       {places?.map((place) => (
         <div
           key={place.id}
-          className={`flex flex-col items-center  p-3 rounded-lg m-3 text-center ${
+          className={`flex flex-col items-center  p-3 rounded-lg m-3 text-center  ${
             activeId === place.id ? 'bg-medium-color ' : 'bg-hard-color '
           } `}
         >
